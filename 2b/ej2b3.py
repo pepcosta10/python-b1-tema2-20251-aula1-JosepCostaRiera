@@ -47,10 +47,11 @@ Exemple:
 """
 
 
-def triangle_area_calculate(
-    base, height):
-    # Write here your code
-    pass
+def triangle_area_calculate(base, height):
+    # L'àrea d'un triangle es calcula com (base * alçada) / 2
+    area = (base * height) / 2
+    # Retornem el resultat del càlcul
+    return area
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta

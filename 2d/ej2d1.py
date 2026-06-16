@@ -49,8 +49,14 @@ Exemple:
 
 
 def kg_to_lb(kg):
-    # Write here your code
-    pass
+    # El valor ha de ser numèric (int o float). Si no -> TypeError
+    if not isinstance(kg, (int, float)) or isinstance(kg, bool):
+        raise TypeError("The value must be numeric")
+    # El valor ha de ser més gran que 0. Si no -> ValueError
+    if kg <= 0:
+        raise ValueError("The value must be greater than 0")
+    # Conversió: 1 kg = 2.20462 lliures
+    return round(kg * 2.20462, 2)
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
